@@ -11,14 +11,14 @@
   <body>
     <div class="container">
        <div class="bar">
-            <img src="/images/logo.png">
-            <img src="/images/name.png">
+            <img src="/images/logo.png"/>
+            <img src="/images/name.png"/>
        </div>
        <div class="menu">
             <a class="navigation" href="/#">Home</a>
             <a class="navigation" href="/#">Organizations</a>
             <a class="navigation" href="/#">Sign Up</a>
-            <a class="navigation" href="/#">Manage</a>
+            <%= link_to "Manage", (org_signed_in? ? manage_url : new_org_session_path), class: "navigation" %>
             <a class="navigation" href="/#">About</a>
             <% if org_signed_in? %>
               <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: "navigation" %>
