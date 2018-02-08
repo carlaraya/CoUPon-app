@@ -1,7 +1,7 @@
 <h1>Log In</h1>
 <h3>This page is for organization use only.If you want to join an organization, visit Sign Up page.</h3>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "signin"}) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "signin-form"}) do |f| %>
 
   <div class="form-group">
     <%= f.label :email %><br />
@@ -16,7 +16,7 @@
   <% if devise_mapping.rememberable? -%>
     <div class="form-group">
       <%= f.check_box :remember_me, {class:"check"} %>
-      <%= f.label :remember_me, {class:"remember"} %>
+      <%= f.label :remember_me, {class:"signin-remember"} %>
     </div>
   <% end -%>
 

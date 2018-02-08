@@ -85,28 +85,28 @@ body{
      padding: 20px;
 }
 
-.signin{
+.signin-form{
      float:top;
      padding:15px;
      text-align: center;
 }
 
-.signin .form-group{
+.signin-form .form-group{
      padding:10px;
 }
 
-.signin .remember{
+.signin-form .signin-remember{
      float:center;
      box-sizing: border-box;
 }
 
-.signin .check{
+.signin-form .check{
      float:center;
      box-sizing: border-box;
 }
 
 
-.signin label{
+.signin-form label{
      display:block;
 }
 
