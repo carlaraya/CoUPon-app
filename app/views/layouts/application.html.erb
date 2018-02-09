@@ -1,39 +1,65 @@
+<!--
+Master - Main template for all pages
+Copyright (C) 2018 Nikki Florita
+This is a course requirement for CS 192 Software Engineering II under the supervision of Asst. Prof. Ma. Rowena C. Solamo of the Department of Computer Science, College of Engineering, University of the Philippines, Diliman for the AY 2015-2016
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program. If not, see https://www.gnu.org/licenses/.
+**CHANGELOG**
+Carl Araya 2/07/18 - Initial creation
+Nikki Florita 2/07/18 - Adding layout to Master
+Nikki Florita 2/09/18 - Adding licenses and indention editing
+-->
+<!--
+File created on: 2/07/18
+Developer: Nikki Florita
+Client: UP Diliman Department of Computer Science Student Organizations
+This software aims to provide a convenient avenue for student organizations to display their org and collect contact information from students interested in joining them.
+-->
+     
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CoUPonApp</title>
-    <%= csrf_meta_tags %>
+     <head>
+          <title>CoUPonApp</title>
+          <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+          <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+          <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     </head>
 
-  <body>
-    <div class="container">
-       <div class="bar">
-            <img src="/images/logo.png"/>
-            <img src="/images/name.png"/>
-       </div>
-       <div class="menu">
-            <a class="navigation" href="/#">Home</a>
-            <a class="navigation" href="/#">Organizations</a>
-            <a class="navigation" href="/#">Sign Up</a>
-            <%= link_to "Manage", (org_signed_in? ? manage_url : new_org_session_path), class: "navigation" %>
-            <a class="navigation" href="/#">About</a>
-            <% if org_signed_in? %>
-              <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: "navigation" %>
-            <% end %>
-       </div>
-    </div>
-    <div style="padding-top: 60px;" />
-    <div class="notice"><%= notice %></p>
-    <div class="alert"><%= alert %></p>
+     <body>
+          <div class="container">
+               <div class="bar">
+                    <img src="/images/logo.png"/>
+                    <img src="/images/name.png"/>
+               </div>
+               <div class="menu">
+                    <a class="navigation" href="/#">Home</a>
+                    <a class="navigation" href="/#">Organizations</a>
+                    <a class="navigation" href="/#">Sign Up</a>
+                    <%= link_to "Manage", (org_signed_in? ? manage_url : new_org_session_path), class: "navigation" %>
+                    <a class="navigation" href="/#">About</a>
+                    <% if org_signed_in? %>
+                    <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: "navigation" %>
+                    <% end %>
+               </div>
+          </div>
+          <div style="padding-top: 60px;" />
+          <div class="notice"><%= notice %></p>
+          <div class="alert"><%= alert %></p>
 
-    <div class="clr"></div>
-    <div class="container2">
-      <%= yield %>
-    </div>
-    <div class="clr"></div>
-    <div style="margin-top:5em;"></div>
-  </body>
+          <div class="clr"></div>
+          <div class="container2">
+               <%= yield %>
+          </div>
+          <div class="clr"></div>
+          <div style="margin-top:5em;"></div>
+     </body>
 </html>
