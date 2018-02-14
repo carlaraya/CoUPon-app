@@ -16,6 +16,7 @@ along with this program. If not, see https://www.gnu.org/licenses/.
 Carl Araya 2/07/18 - Initial creation
 Nikki Florita 2/07/18 - Writing of CSS Codes
 Nikki Florita 2/09/18 - Adding licenses
+Nikki Florita 2/14/18 - Added layout for signup and forgot password links
 
 File created on: 2/07/18
 Developer: Nikki Florita
@@ -95,7 +96,7 @@ body{
      top:70px;
      padding: 20px;
 }
-
+/*
 .signin-form{
      float:top;
      padding:15px;
@@ -125,7 +126,7 @@ body{
      float:right;
      box-sizing: border-box;
 }
-
+*/
 .info{
      margin: auto;
 }
@@ -144,4 +145,26 @@ hr.style1{
      background-color: #000;
      border-color: #000;
 
+}
+
+.container3{
+     float:center;
+     box-sizing: border-box;
+     text-align: center;
+     padding:20px;
+}
+
+.form-extra{
+     color:gray;
+     border:none;
+}
+
+.notice{
+     text-align: center;
+     color:red;
+}
+
+.alert{
+     text-align: center;
+     color:red;
 }

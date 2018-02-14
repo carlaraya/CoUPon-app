@@ -27,29 +27,29 @@ This software aims to provide a convenient avenue for student organizations to d
 <h1>Log In</h1>
 <h3>This page is for organization use only.If you want to join an organization, visit Sign Up page.</h3>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "signin-form"}) do |f| %>
+<div class="container3">
+     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "signin-form"}) do |f| %>
+          <div class="form-group">
+               <%= f.label :email %><br />
+               <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
 
-     <div class="form-group">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-     </div>
+          <div class="form-group">
+               <%= f.label :password %><br />
+               <%= f.password_field :password, autocomplete: "off" %>
+          </div>
 
-     <div class="form-group">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "off" %>
-     </div>
-
-     <% if devise_mapping.rememberable? -%>
-     <div class="form-group">
-          <%= f.check_box :remember_me, {class:"check"} %>
-          <%= f.label :remember_me, {class:"signin-remember"} %>
-     </div>
-     <% end -%>
-
-     <div class="actions">
-          <%= f.submit "Log in", {class:"button"} %>     
-     </div>
+          <% if devise_mapping.rememberable? -%>
+          <div class="form-group">
+               <%= f.check_box :remember_me, {class:"check"} %>
+               <%= f.label :remember_me, {class:"signin-remember"} %>
+          </div>
+          <% end -%>
+          
+          <div class="actions">
+               <%= f.submit "Log in", {class:"button"} %>     
+          </div>
      <% end %>
-</form>
-
-<%= render "devise/shared/links" %>
+     </form>
+     <%= render "devise/shared/links" %>
+</div>
