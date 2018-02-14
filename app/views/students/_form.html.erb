@@ -1,0 +1,62 @@
+<%= form_with(model: student, local: true) do |form| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :student_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :student_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mi, 'MI' %>
+    <%= form.text_field :mi, id: :student_mi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_level %>
+    <%= form.number_field :year_level, min: 1, id: :student_year_level, value: 1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :course %>
+    <%= form.text_field :course, id: :student_course %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.date_select :birthday, id: :student_birthday, start_year: 1900 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sn %>
+    <%= form.text_field :sn, id: :student_sn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.email_field :email, id: :student_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact, id: :student_contact %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

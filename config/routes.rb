@@ -22,6 +22,8 @@ This software aims to provide a convenient avenue for student organizations to d
 =end
 
 Rails.application.routes.draw do
+  resources :students, only: [:create, :show]
+  get 'apply', to: 'students#new'
   get 'manage', to: 'manage#index'
 
   devise_for :orgs

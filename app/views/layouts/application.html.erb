@@ -43,7 +43,7 @@ This software aims to provide a convenient avenue for student organizations to d
                <div class="menu">
                     <a class="navigation" href="/#">Home</a>
                     <a class="navigation" href="/#">Organizations</a>
-                    <a class="navigation" href="/#">Sign Up</a>
+                    <a class="navigation" href="/apply">Apply</a>
                     <%= link_to "Manage", (org_signed_in? ? manage_url : new_org_session_path), class: "navigation" %>
                     <a class="navigation" href="/#">About</a>
                     <% if org_signed_in? %>
@@ -53,11 +53,17 @@ This software aims to provide a convenient avenue for student organizations to d
           </div>
           <div style="padding-top: 60px;" />
 
+           <% if @alt_controllers.include?(params[:controller]) %>
+             <div class="notice"><%= notice %></div>
+             <div class="alert"><%= alert %></div>
+           <% end %>
           <div class="clr"></div>
           <div class="container2">
                <%= yield %>
-               <div class="notice"><%= notice %></p>
-               <div class="alert"><%= alert %></p>
+               <% if not @alt_controllers.include?(params[:controller]) %>
+                 <div class="notice"><%= notice %></div>
+                 <div class="alert"><%= alert %></div>
+               <% end %>
           </div>
           <div class="clr"></div>
           <div style="margin-top:5em;"></div>

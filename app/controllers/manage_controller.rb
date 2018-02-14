@@ -25,5 +25,6 @@ This software aims to provide a convenient avenue for student organizations to d
 class ManageController < ApplicationController
   before_action :authenticate_org!, only: [:index]
   def index
+    @students = Student.all
   end
 end

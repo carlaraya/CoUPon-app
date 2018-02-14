@@ -23,4 +23,8 @@ This software aims to provide a convenient avenue for student organizations to d
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :set_alt
+  def set_alt
+    @alt_controllers = ['manage', 'home']
+  end
 end
