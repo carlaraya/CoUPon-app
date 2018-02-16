@@ -17,6 +17,7 @@ Carl Araya 2/07/18 - Initial creation
 Nikki Florita 2/07/18 - Writing of CSS Codes
 Nikki Florita 2/09/18 - Adding licenses
 Nikki Florita 2/14/18 - Added layout for signup and forgot password links
+Nikki Florita 2/16/18 - Removed unused fields and layout of table
 
 File created on: 2/07/18
 Developer: Nikki Florita
@@ -96,37 +97,7 @@ body{
      top:70px;
      padding: 20px;
 }
-/*
-.signin-form{
-     float:top;
-     padding:15px;
-     text-align: center;
-}
 
-.signin-form .form-group{
-     padding:10px;
-}
-
-.signin-form .signin-remember{
-     float:center;
-     box-sizing: border-box;
-}
-
-.signin-form .check{
-     float:center;
-     box-sizing: border-box;
-}
-
-
-.signin-form label{
-     display:block;
-}
-
-#logout_button{
-     float:right;
-     box-sizing: border-box;
-}
-*/
 .info{
      margin: auto;
 }
@@ -167,4 +138,14 @@ hr.style1{
 .alert{
      text-align: center;
      color:red;
+}
+
+.student-table{
+     border: 1px solid black;
+     width: 100%;
+}
+
+th, td{
+     border: 1px solid black;
+     text-align: center;
 }
