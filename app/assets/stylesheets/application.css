@@ -131,8 +131,13 @@ hr.style1{
 }
 
 .notice{
-     text-align: center;
-     color:red;
+     color:#000;
+     position:fixed;
+     background-color: #fff;
+     margin:auto;
+     left:40%;
+     font-size: 150%;
+     box-sizing: border-box;
 }
 
 .alert{
@@ -147,5 +152,9 @@ hr.style1{
 
 th, td{
      border: 1px solid black;
+     text-align: center;
+}
+
+.center-text{
      text-align: center;
 }

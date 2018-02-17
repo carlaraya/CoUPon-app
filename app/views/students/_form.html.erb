@@ -13,50 +13,59 @@
 
   <div class="field">
     <%= form.label :last_name %>
+    <br>
     <%= form.text_field :last_name, id: :student_last_name %>
   </div>
 
   <div class="field">
     <%= form.label :first_name %>
+    <br>
     <%= form.text_field :first_name, id: :student_first_name %>
   </div>
 
   <div class="field">
     <%= form.label :mi, 'MI' %>
+    <br>
     <%= form.text_field :mi, id: :student_mi %>
   </div>
 
   <div class="field">
     <%= form.label :year_level %>
-    <%= form.number_field :year_level, min: 1, id: :student_year_level, value: 1 %>
+    <br>
+    <%= form.number_field :year_level, min: 1, id: :student_year_level, value: 1%>
   </div>
 
   <div class="field">
     <%= form.label :course %>
+    <br>
     <%= form.text_field :course, id: :student_course %>
   </div>
 
   <div class="field">
     <%= form.label :birthday %>
+    <br>
     <%= form.date_select :birthday, id: :student_birthday, start_year: 1900 %>
   </div>
 
   <div class="field">
     <%= form.label :sn %>
+    <br>
     <%= form.text_field :sn, id: :student_sn %>
   </div>
 
   <div class="field">
     <%= form.label :email %>
+    <br>
     <%= form.email_field :email, id: :student_email %>
   </div>
 
   <div class="field">
     <%= form.label :contact %>
+    <br>
     <%= form.text_field :contact, id: :student_contact %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit", {class:"button"} %>
   </div>
 <% end %>
