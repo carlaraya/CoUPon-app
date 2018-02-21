@@ -31,7 +31,7 @@ This software aims to provide a convenient avenue for student organizations to d
      padding: 0;
 }
 
-a{
+.container a{
      text-decoration: none;
      color: #fff;
      font: arial;

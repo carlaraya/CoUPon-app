@@ -72,7 +72,7 @@ This software aims to provide a convenient avenue for student organizations to d
   </div>
 
   <div class="field">
-    <%= form.label :sn %>
+    <%= form.label :sn, 'Student Number' %>
     <br>
     <%= form.text_field :sn, id: :student_sn %>
   </div>
@@ -88,6 +88,12 @@ This software aims to provide a convenient avenue for student organizations to d
     <br>
     <%= form.text_field :contact, id: :student_contact %>
   </div>
+
+  <%= form.collection_check_boxes(:org_ids, @orgs, :id, :name) do |b| %>
+    <%= b.check_box %>
+    <%= b.label %>
+    </br>
+  <% end %>
 
   <div class="actions">
     <%= form.submit "Submit", {class:"button"} %>
