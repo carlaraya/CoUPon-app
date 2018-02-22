@@ -91,6 +91,8 @@ This software aims to provide a convenient avenue for student organizations to d
     <%= form.text_field :contact, id: :student_contact %>
   </div>
 
+  <p>Organization/s to apply</p>
+
   <%= form.collection_check_boxes(:org_ids, @orgs, :id, :name) do |b| %>
     <%= b.check_box %>
     <%= b.label %>
