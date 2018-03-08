@@ -1,0 +1,34 @@
+<h2>Students</h2>
+
+<table class="student-table">
+  <thead>
+    <tr>
+      <th>Last name</th>
+      <th>First name</th>
+      <th>Mi</th>
+      <th>Year level</th>
+      <th>Course</th>
+      <th>Birthday</th>
+      <th>SN</th>
+      <th>Email</th>
+      <th>Contact</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.last_name %></td>
+        <td><%= student.first_name %></td>
+        <td><%= student.mi %></td>
+        <td><%= student.year_level %></td>
+        <td><%= student.course %></td>
+        <td><%= student.birthday %></td>
+        <td><%= student.sn %></td>
+        <td><%= student.email %></td>
+        <td><%= student.contact %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

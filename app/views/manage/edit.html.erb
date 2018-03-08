@@ -1,0 +1,11 @@
+<%= simple_form_for current_org, method: :patch, url: manage_update_path do |f| %>
+  <%= f.input :name, wrapper_html: { class: 'laskdfj' }, label_html: { class: 'laskdfj', style: "display: block;" }  %>
+  <%= f.input :logo,  as: :file, wrapper_html: { class: 'laskdfj' }, label_html: { class: 'laskdfj', style: "display: block;"  } %>
+  <%= f.input :info, wrapper_html: { class: 'laskdfj' }, label_html: { class: 'laskdfj', style: "display: block;"  }   %>
+  <%= f.input :contact, wrapper_html: { class: 'laskdfj' }, label_html: { class: 'laskdfj', style: "display: block;"  }  %>
+  <br />
+  <%= f.button :submit, class: 'laskdfj' %>
+<% end %>
+
+<br />
+<%= link_to 'Delete Org', manage_destroy_path, method: :delete, data: {confirm: "Are you sure?"} %>

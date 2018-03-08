@@ -25,39 +25,9 @@ Client: UP Diliman Department of Computer Science Student Organizations
 This software aims to provide a convenient avenue for student organizations to display their org and collect contact information from students interested in joining them.
 -->
 
-<h1>Students</h1>
-
-<table class="student-table">
-  <thead>
-    <tr>
-      <th>Last name</th>
-      <th>First name</th>
-      <th>Mi</th>
-      <th>Year level</th>
-      <th>Course</th>
-      <th>Birthday</th>
-      <th>SN</th>
-      <th>Email</th>
-      <th>Contact</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @students.each do |student| %>
-      <tr>
-        <td><%= student.last_name %></td>
-        <td><%= student.first_name %></td>
-        <td><%= student.mi %></td>
-        <td><%= student.year_level %></td>
-        <td><%= student.course %></td>
-        <td><%= student.birthday %></td>
-        <td><%= student.sn %></td>
-        <td><%= student.email %></td>
-        <td><%= student.contact %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+<%# image_tag current_org.logo.url(:medium) %>
+<%= image_tag current_org.logo.url(:thumb) %>
+<h1>Welcome, <%= current_org.name %>!</h1>
+<br />
+<div><%= link_to "Table of Students", manage_table_path %></div>
+<div><%= link_to "Edit Org", manage_edit_path %></div>

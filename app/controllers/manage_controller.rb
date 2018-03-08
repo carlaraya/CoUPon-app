@@ -25,8 +25,39 @@ This software aims to provide a convenient avenue for student organizations to d
 =end
 
 class ManageController < ApplicationController
-  before_action :authenticate_org!, only: [:index]
+  before_action :authenticate_org!
   def index
+  end
+
+  def table
     @students = current_org.students
   end
+
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if current_org.update(org_params)
+        format.html { redirect_to manage_path, notice: 'Org was successfully updated.' }
+        format.json { render :show, status: :ok, location: @org }
+      else
+        format.html { render :edit }
+        format.json { render json: @org.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    current_org.destroy
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Org was successfully deleted.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    def org_params
+      params.require(:org).permit(:name, :info, :contact, :logo)
+    end
 end

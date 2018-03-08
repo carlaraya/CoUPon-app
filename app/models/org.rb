@@ -28,4 +28,8 @@ class Org < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_and_belongs_to_many :students
+  validates :name, length: { minimum: 2 }
+  has_attached_file :logo, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/missing_:style.png"
+  validates_attachment_content_type :logo, content_type: /\Aimage\/.*\z/
+  validates_with AttachmentSizeValidator, attributes: :logo, less_than: 1.megabytes
 end

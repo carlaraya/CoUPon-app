@@ -26,6 +26,10 @@ Rails.application.routes.draw do
   resources :students, only: [:create, :show]
   get 'apply', to: 'students#new'
   get 'manage', to: 'manage#index'
+  get 'manage/table', to: 'manage#table'
+  get 'manage/edit', to: 'manage#edit'
+  patch 'manage/update', to: 'manage#update'
+  delete 'manage/destroy', to: 'manage#destroy'
 
   devise_for :orgs
   root to: 'home#index'
