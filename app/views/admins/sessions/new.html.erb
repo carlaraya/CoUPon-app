@@ -1,13 +1,39 @@
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email, required: false, autofocus: true %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+<!--
+Sign in admin- Form for administrators to sign in
+Copyright (C) 2018 Nikki Florita
+This is a course requirement for CS 192 Software Engineering II under the supervision of Asst. Prof. Ma. Rowena C. Solamo of the Department of Computer Science, College of Engineering, University of the Philippines, Diliman for the AY 2017-2018
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program. If not, see https://www.gnu.org/licenses/.
+**CHANGELOG**
+Carl Araya 3/09/18 - Initial creation
+Nikki Florita 3/09/18 - Adding layout to signin screen
+-->
+<!--
+File created on: 2/07/18
+Developer: Nikki Florita
+Client: UP Diliman Department of Computer Science Student Organizations
+This software aims to provide a convenient avenue for student organizations to display their org and collect contact information from students interested in joining them.
+-->
+<h1>Log in</h1>
+<h3>This log in page is for admins only. If you are an organization, visit Manage page. If you are a student, visit Apply page.</h3>
+<div class=container3>
+     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-inputs">
+          
+          <%= f.input :email, label_html: { style: "display: block;" } %>
+          <%= f.input :password, label_html: { style: "display: block;" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+     </div>
+     <div class="form-actions">
+          <%= f.button :submit, "Log in", class: "button" %>
+     </div>
+     <% end %>
+</div>
