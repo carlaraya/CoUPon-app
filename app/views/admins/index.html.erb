@@ -1,0 +1,12 @@
+<h2>Logged in as <%= current_admin.email %></h2>
+<br />
+<div>
+  <h3>Create org account</h3>
+  <%= simple_form_for @org, method: :post, url: create_org_path do |f| %>
+    <%= f.input :name, label_html: { style: "display: block;" } %>
+    <%= f.input :email, label_html: { style: "display: block;" } %>
+    <%= f.input :password, label_html: { style: "display: block;" } %>
+    <%= f.input :password_confirmation, label_html: { style: "display: block;" } %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

@@ -25,6 +25,9 @@ This software aims to provide a convenient avenue for student organizations to d
 
 class HomeController < ApplicationController
   def index
+    if admin_signed_in?
+      redirect_to admins_url
+    end
     if org_signed_in?
       redirect_to manage_url
     end

@@ -22,6 +22,13 @@ This software aims to provide a convenient avenue for student organizations to d
 =end
 seeds_list = [
   {
+    model: Admin,
+    seeds: [
+      { email: "one@admin.com", password: "password", password_confirmation: "password" },
+      { email: "two@admin.com", password: "password", password_confirmation: "password" },
+    ]
+  },
+  {
     model: Org,
     seeds: [
       { name: "UP CSI", email: "asdf@asdf.com", password: "asdfasdf", password_confirmation: "asdfasdf" },

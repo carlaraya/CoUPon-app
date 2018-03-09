@@ -23,14 +23,20 @@ This software aims to provide a convenient avenue for student organizations to d
 =end
 
 Rails.application.routes.draw do
+  root to: 'home#index'
+
   resources :students, only: [:create, :show]
   get 'apply', to: 'students#new'
+
+  devise_for :orgs
   get 'manage', to: 'manage#index'
   get 'manage/table', to: 'manage#table'
   get 'manage/edit', to: 'manage#edit'
   patch 'manage/update', to: 'manage#update'
   delete 'manage/destroy', to: 'manage#destroy'
 
-  devise_for :orgs
-  root to: 'home#index'
+  devise_for :admins
+  get 'admins', to: 'admins#index'
+  post 'create_org', to: 'admins#create_org'
+
 end
