@@ -159,3 +159,14 @@ th, td{
 .center-text{
      text-align: center;
 }
+
+.container4{
+     float:center;
+     box-sizing: border-box;
+     
+     padding:20px;
+}
+
+.image{
+     float:left;
+}
