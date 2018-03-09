@@ -50,7 +50,9 @@ This software aims to provide a convenient avenue for student organizations to d
                       <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: "navigation" %>
                     <% end %>
                     <% if admin_signed_in? %>
-                      <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: "navigation" %>
+                      <%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "navigation" %>
+                    <% else %>
+                      <%= link_to "Admin", new_admin_session_path, class: "navigation" %>
                     <% end %>
                </div>
           </div>
