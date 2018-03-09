@@ -19,6 +19,7 @@ Nikki Florita 2/09/18 - Adding licenses
 Nikki Florita 2/14/18 - Added layout for signup and forgot password links
 Nikki Florita 2/16/18 - Removed unused fields and layout of table
 Carl Araya 2/21/18 - Fix non-menu links
+Nikki Florita 3/8/18 - Added layout elements for org index and edit
 
 File created on: 2/07/18
 Developer: Nikki Florita
@@ -158,4 +159,15 @@ th, td{
 
 .center-text{
      text-align: center;
+}
+
+.container4{
+     float:center;
+     box-sizing: border-box;
+     
+     padding:20px;
+}
+
+.image{
+     float:left;
 }
