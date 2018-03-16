@@ -24,6 +24,7 @@ This software aims to provide a convenient avenue for student organizations to d
 
 Rails.application.routes.draw do
   root to: 'home#index'
+  get 'about', to: 'home#about'
 
   resources :students, only: [:create, :show]
   get 'apply', to: 'students#new'

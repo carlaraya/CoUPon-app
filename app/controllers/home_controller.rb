@@ -32,4 +32,6 @@ class HomeController < ApplicationController
       redirect_to manage_url
     end
   end
+  def about
+  end
 end
