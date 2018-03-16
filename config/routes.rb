@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   resources :students, only: [:create, :show]
   get 'apply', to: 'students#new'
+  get 'student_confirm', to: 'students#confirm'
 
   devise_for :orgs
   get 'manage', to: 'manage#index'

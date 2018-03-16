@@ -30,7 +30,7 @@ class ManageController < ApplicationController
   end
 
   def table
-    @students = current_org.students
+    @students = current_org.students.where(token: nil)
   end
 
   def edit

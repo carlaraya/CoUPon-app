@@ -23,5 +23,6 @@ This software aims to provide a convenient avenue for student organizations to d
 =end
 
 class Student < ApplicationRecord
+  has_secure_token
   has_and_belongs_to_many :orgs
 end

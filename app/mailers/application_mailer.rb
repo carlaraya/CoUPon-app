@@ -22,6 +22,6 @@ This software aims to provide a convenient avenue for student organizations to d
 =end
 
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: 'couponupd@gmail.com'
   layout 'mailer'
 end

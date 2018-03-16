@@ -62,6 +62,25 @@ class StudentsController < ApplicationController
     end
   end
 
+  def confirm
+    if params[:token]
+      @student = Student.find_by_token(params[:token])
+      if @student
+        @student.token = nil
+        if @student.save
+          flash[:notice] = "Student confirmed."
+        else
+          flash[:alert] = "Server error. Please try to fill up the form again."
+        end
+      else
+        flash[:alert] = "Invalid token."
+      end
+    else
+      flash[:alert] = "Invalid token."
+    end
+    redirect_to root_path
+  end
+
   # PATCH/PUT /students/1
   # PATCH/PUT /students/1.json
   #def update
