@@ -15,6 +15,7 @@ along with this program. If not, see https://www.gnu.org/licenses/.
 **CHANGELOG**
 Carl Araya 2/07/18 - Initial creation
 Nikki Florita 2/14/18 - added description of homepage
+Nikki Florita 3/17/18 - adding image slideshow and editing of homepage
 -->
 <!--
 File created on: 2/07/18
@@ -22,7 +23,43 @@ Developer: Carl Araya
 Client: UP Diliman Department of Computer Science Student Organizations
 This software aims to provide a convenient avenue for student organizations to display their org and collect contact information from students interested in joining them.
 -->
+
+<!--
+Logic of code from traversymedia on youtube.com
+-->
+<script>
+     var i = 0;
+     var images = [];
+     var time = 3000;
+
+     images[0] = "../images/up_dcs.png"
+     images[1] = "../images/up_acm.png"
+     images[2] = "../images/up_cursor.png"
+     images[3] = "../images/up_csi.png"
+     images[4] = "../images/up_parser.png"
+     
+     function changeImg(){
+          document.slide.src = images[i];
+          if( i < images.length-1 ){
+               i++;
+          }
+          else{
+               i=0;
+          }
+
+          setTimeout("changeImg()", time)
+     }
+
+     window.onload = changeImg;
+
+</script>
+
 <h1>Welcome to CoUPon!</h1>
-<p>CoUPon is a website for UP Diliman students to discover and apply to UP Diliman Department of Computer Science Organizations. The respective organizations will get a list with contact information for the signups and contact them during the application process period.</p>
+<br/>
+<h3>CoUPon is a website for UP Diliman students to discover and apply to UP Diliman Department of Computer Science Organizations. The respective organizations will get a list with contact information for the signups and contact them during the application process period.</h3>
+
+<div class = "container3">
+     <img name="slide" width="400" height="400">
+</div>
 <%= ENV['GMAIL_EMAIL'] %>
 
