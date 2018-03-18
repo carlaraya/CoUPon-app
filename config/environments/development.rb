@@ -55,11 +55,12 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
 
+  load "#{Rails.root}/config/initializers/environment_variables.rb"
   config.action_mailer.smtp_settings = {
       :address              => 'smtp.gmail.com',
       :port                 => 587,
       :domain               => 'localhost:3000',
-      :user_name            => ENV['GMAIL_EMAIL'],
+      :user_name            => ENV['GMAIL_USERNAME'],
       :password             => ENV['GMAIL_PASSWORD'],
       :authentication       => :plain,
       :enable_starttls_auto => true

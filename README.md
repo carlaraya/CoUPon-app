@@ -1,5 +1,16 @@
 # CoUPon-app
 
+## Seting Up Mailer
+
+
+Make a new file with contents
+```
+development:
+  GMAIL_USERNAME: <OUR EMAIL>
+  GMAIL_PASSWORD: <OUR PASS>
+```
+and save it as `CoUPon-app/config/environment_variables.yml`.
+
 ## Installation
 
 ### Linux
