@@ -15,6 +15,7 @@ along with this program. If not, see https://www.gnu.org/licenses/.
 **CHANGELOG**
 Carl Araya 2/14/18 - Initial creation
 Carl Araya 2/21/18 - Add org connection
+Carl Araya 3/16/18 - Add secure token
 
 File created on: 2/14/18
 Developer: Carl Araya

@@ -15,6 +15,7 @@ along with this program. If not, see https://www.gnu.org/licenses/.
 **CHANGELOG**
 Carl Araya 2/07/18 - Initial creation
 Carl Araya 2/14/18 - Add routes for students
+Carl Araya 3/16/18 - Add routes for confirmation
 
 File created on: 2/07/18
 Developer: Carl Araya

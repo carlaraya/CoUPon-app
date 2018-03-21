@@ -14,8 +14,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see https://www.gnu.org/licenses/.
 **CHANGELOG**
 Carl Araya 2/08/18 - Initial creation
-Carl Araya 2/14/18 - Add students variable
-Carl Araya 2/21/18 - Change students to only org's students
+Carl Araya 3/16/18 - Only show students that have been confirmed
 
 
 File created on: 2/08/18

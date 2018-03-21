@@ -16,6 +16,7 @@ along with this program. If not, see https://www.gnu.org/licenses/.
 Carl Araya 2/14/18 - Initial creation
 Carl Araya 2/14/18 - Add students variable
 Carl Araya 2/21/18 - Change students to only org's students
+Carl Araya 3/17/18 - Implement mailer
 
 
 File created on: 2/14/18

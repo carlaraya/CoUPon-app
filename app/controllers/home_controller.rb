@@ -15,6 +15,7 @@ along with this program. If not, see https://www.gnu.org/licenses/.
 **CHANGELOG**
 Carl Araya 2/07/18 - Initial creation
 Carl Araya 2/08/18 - Redirect to Manage if logged in already
+Carl Araya 3/16/18 - Add About page
 
 
 File created on: 2/07/18

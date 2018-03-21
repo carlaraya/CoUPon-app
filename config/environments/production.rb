@@ -14,6 +14,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see https://www.gnu.org/licenses/.
 **CHANGELOG**
 Carl Araya 2/07/18 - Initial creation
+Carl Araya 3/17/18 - Add mailer options
 
 File created on: 2/07/18
 Developer: Carl Araya
