@@ -1,0 +1,9 @@
+<h1>Orgs#index</h1>
+<% @orgs.each do |org| %>
+  <div>
+    <%= link_to show_org_path(org.slug) do %>
+      <%= image_tag org.logo.url(:thumb) %>
+      <%= org.name %>
+    <% end %>
+  </div>
+<% end %>

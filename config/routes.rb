@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   get 'apply', to: 'students#new'
   get 'student_confirm', to: 'students#confirm'
 
-  devise_for :orgs
+  devise_for :orgs, skip: [ :registrations ]
   get 'manage', to: 'manage#index'
   get 'manage/table', to: 'manage#table'
   get 'manage/edit', to: 'manage#edit'
@@ -41,5 +41,8 @@ Rails.application.routes.draw do
   devise_for :admins
   get 'admins', to: 'admins#index'
   post 'create_org', to: 'admins#create_org'
+
+  get 'orgs', to: 'orgs#index'
+  get 'orgs/:name', to: 'orgs#show', as: 'show_org'
 
 end
