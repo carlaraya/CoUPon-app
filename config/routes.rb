@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get 'manage/edit', to: 'manage#edit'
   patch 'manage/update', to: 'manage#update'
   delete 'manage/destroy', to: 'manage#destroy'
+  delete 'manage/destroy_students', to: 'manage#destroy_students'
 
   devise_for :admins
   get 'admins', to: 'admins#index'

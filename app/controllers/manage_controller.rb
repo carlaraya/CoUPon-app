@@ -55,6 +55,15 @@ class ManageController < ApplicationController
     end
   end
 
+  def destroy_students
+    current_org.students.clear
+    Student.left_outer_joins(:orgs).where( orgs: { id: nil }).destroy_all
+    respond_to do |format|
+      format.html { redirect_to manage_table_path, notice: 'Entries were successfully deleted.' }
+      format.json { head :no_content }
+    end
+  end
+
   private
     def org_params
       params.require(:org).permit(:name, :info, :contact, :logo)

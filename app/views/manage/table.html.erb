@@ -26,6 +26,8 @@ This software aims to provide a convenient avenue for student organizations to d
 
 <h2>Students</h2>
 
+<%= link_to 'Remove Student Records', manage_destroy_students_path, method: :delete, data: {confirm: "Are you sure?"} %>
+
 <table class="student-table">
   <thead>
     <tr>
