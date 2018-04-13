@@ -22,6 +22,7 @@ Carl Araya 2/21/18 - Fix non-menu links
 Nikki Florita 3/8/18 - Added layout elements for org index and edit
 Nikki Florita 4/10/18 - Added layout elements for view org index
 Nikki Florita 4/12/18 - Added layout elements for show org index
+Nikki Florita 4/13/18 - Modified container 4
 
 File created on: 2/07/18
 Developer: Nikki Florita
@@ -166,6 +167,7 @@ th, td{
 .container4{
      float:center;
      box-sizing: border-box;
+     text-align: justify;
      
      padding:20px;
 }
