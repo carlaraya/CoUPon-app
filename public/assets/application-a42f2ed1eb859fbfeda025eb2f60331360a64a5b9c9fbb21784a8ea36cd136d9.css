@@ -31,6 +31,7 @@ This software aims to provide a convenient avenue for student organizations to d
 
 */
 
+
 *{
      margin: 0;
      padding: 0;
@@ -62,7 +63,7 @@ This software aims to provide a convenient avenue for student organizations to d
 
 body{
      background-image: url("../images/background.png");
-     background-attachment: fixed;
+     background-attachment: : fixed;
      background-repeat: no-repeat;
      background-size: cover;
      font-family: Arial, Helvetica;
