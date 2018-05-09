@@ -41,21 +41,8 @@ This software aims to provide a convenient avenue for student organizations to d
                     <img src="/images/logo.png" class="logo"/>
                     <img src="/images/name.png" class="name"/>
                </div>
-               <div class="right menu">
                     <%= link_to "Home", root_path, class: "item" %>
-                    <%= link_to "Organizations", orgs_path, class: "item" %>
-                    <%= link_to "Apply", apply_path, class: "item" %>
-                    <%= link_to "Manage", (org_signed_in? ? manage_url : new_org_session_path), class: "item" %>
-                    <% if org_signed_in? %>
-                      <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: "item" %>
-                    <% end %>
-                    <% if admin_signed_in? %>
-                      <%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "item" %>
-                    <% else %>
-                      <%= link_to "Admin", new_admin_session_path, class: "item" %>
-                    <% end %>
                     <%= link_to "About", about_path, class: "item" %>
-               </div>
           </div>
            <% if @alt_controllers.include?(params[:controller]) %>
              <% if notice %>

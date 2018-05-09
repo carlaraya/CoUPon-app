@@ -28,9 +28,10 @@ class HomeController < ApplicationController
   def index
     if admin_signed_in?
       redirect_to admins_url
-    
     elsif org_signed_in?
       redirect_to manage_url
+    else
+      @orgs = Org.all
     end
   end
   def about

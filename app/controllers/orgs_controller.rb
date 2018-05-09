@@ -1,8 +1,5 @@
 class OrgsController < ApplicationController
   before_action :set_org, only: [:show]
-  def index
-    @orgs = Org.all
-  end
 
   def show
   end
