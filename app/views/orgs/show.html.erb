@@ -26,17 +26,9 @@ This software aims to provide a convenient avenue for student organizations to d
 <div class=container4>
      <%= image_tag @org.logo.url(:thumb) , class: "image" %>
      <h1><%= @org.name %></h1>
-     <br />
-     <br />
-     <br />
-     <br />
      <h2>What is <%= @org.name %>?</h2>
      <p><%= (@org.info.presence || 'no info').gsub(/\n/, '<br/>').html_safe %></p>
-     <br />
-     <br />
      <h4>Contact details</h4>
      <p><%= (@org.contact.presence || 'no info').gsub(/\n/, '<br/>').html_safe %></p>
-     <br />
-     <br />
-     <%= link_to "Return to Organizations", orgs_path, class: "navigation", class: "button" %>
+     <%= link_to "Return to Organizations", root_path, class: "navigation", class: "button" %>
 </div>

@@ -31,17 +31,18 @@ This software aims to provide a convenient avenue for student organizations to d
     <h1>Welcome to CoUPon!</h1>
     <h3>CoUPon is a website for UP Diliman students to discover and apply to UP Diliman Department of Computer Science Organizations. The respective organizations will get a list with contact information for the signups and contact them during the application process period.</h3>
 
-    <h1>Organizations</h1>
-    <h3>Want to know more about the different student organizations? Click on organizations below to view their description and contact details.</h3>
-    <div class="ui stackable four column grid">
+    <h2>Organizations</h2>
+    <h4>Want to know more about the different student organizations? Click on organizations below to view their description and contact details.</h4>
+    <div class="ui four cards">
       <% @orgs.each do |org| %>
-        <div class="column">
-          <%= link_to show_org_path(org.slug) do %>
-            <%= image_tag org.logo.url(:thumb) %>
-            <br/>
-            <%= org.name %>
-          <% end %>
-        </div>
+        <%= link_to show_org_path(org.slug), class: "ui card" do %>
+          <div class="image">
+            <%= image_tag org.logo.url(:medium) %>
+          </div>
+          <div class="content">
+            <div class="header"><%= org.name %></div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>

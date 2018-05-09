@@ -43,37 +43,27 @@ This software aims to provide a convenient avenue for student organizations to d
                </div>
                     <%= link_to "Home", root_path, class: "item" %>
                     <%= link_to "About", about_path, class: "item" %>
-          </div>
-           <% if @alt_controllers.include?(params[:controller]) %>
+                  <% if org_signed_in? %>
+                    <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: "item" %>
+                  <% end %>
+                  <% if admin_signed_in? %>
+                    <%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "item" %>
+                  <% end %>
+            </div>
              <% if notice %>
-               <div class="ui message notice">
-                 <i class="close icon"></i>
-                 <%= notice %>
-               </div>
-             <% end %>
-             <% if alert %>
-               <div class="ui message alert">
-                 <i class="close icon"></i>
-                 <%= alert %>
-               </div>
-             <% end %>
+             <div class="ui blue message notice">
+               <i class="close icon"></i>
+               <%= notice %>
+             </div>
+           <% end %>
+           <% if alert %>
+             <div class="ui message alert">
+               <i class="close icon"></i>
+               <%= alert %>
+             </div>
            <% end %>
           <div class="ui container segment" id="main-content">
                <%= yield %>
-               <% if not @alt_controllers.include?(params[:controller]) %>
-                 <% if notice %>
-                   <div class="ui message notice">
-                     <i class="close icon"></i>
-                     <%= notice %>
-                   </div>
-                 <% end %>
-                 <% if alert %>
-                   <div class="ui message alert">
-                     <i class="close icon"></i>
-                     <%= alert %>
-                   </div>
-                 <% end %>
-               <% end %>
           </div>
      </body>
 </html>

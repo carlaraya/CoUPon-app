@@ -58,11 +58,12 @@ body{
     position: fixed;
     left: 40%;
     width: 20%;
+    z-index: 100;
 }
 
-.alert{
-     text-align: center;
-     color:red;
+.alert {
+    background-color: red !important;
+    color: white !important;
 }
 
 #main-content {
