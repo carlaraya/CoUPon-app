@@ -31,33 +31,21 @@ This software aims to provide a convenient avenue for student organizations to d
 
 */
 
-*{
-     margin: 0;
-     padding: 0;
+@import 'semantic-ui';
+
+.red {
+    background-color: #902012 !important;
 }
 
-.container a{
-     text-decoration: none;
-     color: #fff;
-     font: arial;
-     padding:10px;
-     border-left: solid 3px;
-     border-right: solid 3px;
+#navbar {
+    border-radius: 0!important;
 }
 
-.clr{
-     clear:both;
-}
-.button{
-     padding:10px;
-     margin: 5px;
-     background-color: #35b94a;
-     border:none;
-     color: #fff;
-}
 
-.button:hover{
-     background-color: #009245;
+#navbar img {
+    height: 40px;
+    width: auto;
+    margin: 0 4px;
 }
 
 body{
@@ -65,84 +53,11 @@ body{
      background-attachment: fixed;
      background-repeat: no-repeat;
      background-size: cover;
-     font-family: Arial, Helvetica;
-     font-size: 16px;
 }
-
-.container{
-     z-index: 1;
-     width: 100%;
-     margin: auto;
-     background-color: #902012;
-     position: fixed;
-}
-.bar{
-     float:left;
-     padding-left: 60px;
-     padding-top:5px;
-}
-.menu{
-     background-color: #902012;
-     color: #fff;
-     padding-right: 60px;
-     float:right;
-     padding-bottom:15px;
-     padding-top:15px;
-}
-
-.navigation:hover{
-     background-color: red;
-}
-
-.container2{
-     margin:auto;
-     background:white;
-     width:70%;
-     position: relative;
-     top:70px;
-     padding: 20px;
-}
-
-.info{
-     margin: auto;
-}
-.entry{
-     padding-left:20px;
-     padding-right:20px;
-     padding-top: 10px;
-}
-
-
-hr.style1{
-     margin:auto;
-     width: 100%;
-     color:#000;
-     padding:2px;
-     background-color: #000;
-     border-color: #000;
-
-}
-
-.container3{
-     float:center;
-     box-sizing: border-box;
-     text-align: center;
-     padding:20px;
-}
-
-.form-extra{
-     color:gray;
-     border:none;
-}
-
-.notice{
-     color:#000;
-     position:fixed;
-     background-color: #fff;
-     margin:auto;
-     left:40%;
-     font-size: 150%;
-     box-sizing: border-box;
+.ui.message{
+    position: fixed;
+    left: 40%;
+    width: 20%;
 }
 
 .alert{
@@ -150,35 +65,7 @@ hr.style1{
      color:red;
 }
 
-.student-table{
-     border: 1px solid black;
-     width: 100%;
-}
-
-th, td{
-     border: 1px solid black;
-     text-align: center;
-}
-
-.center-text{
-     text-align: center;
-}
-
-.container4{
-     float:center;
-     box-sizing: border-box;
-     text-align: justify;
-     
-     padding:20px;
-}
-
-.image{
-     float:left;
-}
-
-.container5{
-     float:center;
-     box-sizing: border-box;
-     
-     padding:20px;
+#main-content {
+    padding: 30px 50px;
+    background-color: rgba(255, 255, 255, .9);
 }

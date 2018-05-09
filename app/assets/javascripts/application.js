@@ -34,6 +34,20 @@ This software aims to provide a convenient avenue for student organizations to d
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require rails-ujs
+//= require semantic-ui
 //= require turbolinks
 //= require_tree .
+
+
+$(function() {
+  $('.message .close')
+    .on('click', function() {
+      $(this)
+        .closest('.message')
+        .transition('fade')
+      ;
+    })
+  ;
+});

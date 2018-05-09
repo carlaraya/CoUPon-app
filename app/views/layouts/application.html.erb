@@ -36,42 +36,57 @@ This software aims to provide a convenient avenue for student organizations to d
      </head>
 
      <body>
-          <div class="container">
-               <div class="bar">
-                    <img src="/images/logo.png"/>
-                    <img src="/images/name.png"/>
+          <div class="ui red inverted menu borderless" id="navbar">
+               <div class="item">
+                    <img src="/images/logo.png" class="logo"/>
+                    <img src="/images/name.png" class="name"/>
                </div>
-               <div class="menu">
-                    <a class="navigation" href="/#">Home</a>
-                      <%= link_to "Organizations", orgs_path, class: "navigation" %>
-                    <a class="navigation" href="/apply">Apply</a>
-                    <%= link_to "Manage", (org_signed_in? ? manage_url : new_org_session_path), class: "navigation" %>
+               <div class="right menu">
+                    <%= link_to "Home", root_path, class: "item" %>
+                    <%= link_to "Organizations", orgs_path, class: "item" %>
+                    <%= link_to "Apply", apply_path, class: "item" %>
+                    <%= link_to "Manage", (org_signed_in? ? manage_url : new_org_session_path), class: "item" %>
                     <% if org_signed_in? %>
-                      <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: "navigation" %>
+                      <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: "item" %>
                     <% end %>
                     <% if admin_signed_in? %>
-                      <%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "navigation" %>
+                      <%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "item" %>
                     <% else %>
-                      <%= link_to "Admin", new_admin_session_path, class: "navigation" %>
+                      <%= link_to "Admin", new_admin_session_path, class: "item" %>
                     <% end %>
-                    <a class="navigation" href="/about">About</a>
+                    <%= link_to "About", about_path, class: "item" %>
                </div>
           </div>
-          <div style="padding-top: 60px;" />
-
            <% if @alt_controllers.include?(params[:controller]) %>
-             <div class="notice"><%= notice %></div>
-             <div class="alert"><%= alert %></div>
+             <% if notice %>
+               <div class="ui message notice">
+                 <i class="close icon"></i>
+                 <%= notice %>
+               </div>
+             <% end %>
+             <% if alert %>
+               <div class="ui message alert">
+                 <i class="close icon"></i>
+                 <%= alert %>
+               </div>
+             <% end %>
            <% end %>
-          <div class="clr"></div>
-          <div class="container2">
+          <div class="ui container segment" id="main-content">
                <%= yield %>
                <% if not @alt_controllers.include?(params[:controller]) %>
-                 <div class="notice"><%= notice %></div>
-                 <div class="alert"><%= alert %></div>
+                 <% if notice %>
+                   <div class="ui message notice">
+                     <i class="close icon"></i>
+                     <%= notice %>
+                   </div>
+                 <% end %>
+                 <% if alert %>
+                   <div class="ui message alert">
+                     <i class="close icon"></i>
+                     <%= alert %>
+                   </div>
+                 <% end %>
                <% end %>
           </div>
-          <div class="clr"></div>
-          <div style="margin-top:5em;"></div>
      </body>
 </html>

@@ -25,16 +25,17 @@ This software aims to provide a convenient avenue for student organizations to d
 -->
 <h1>Log In</h1>
 <h3>This log in page is for admins only. If you are an organization, visit Manage page. If you are a student, visit Apply page.</h3>
-<div class=container3>
-     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="form-inputs">
-          
-          <%= f.input :email, label_html: { style: "display: block;" } %>
-          <%= f.input :password, label_html: { style: "display: block;" } %>
-          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-     </div>
-     <div class="form-actions">
-          <%= f.button :submit, "Log in", class: "button" %>
-     </div>
-     <% end %>
-</div>
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "ui form"}) do |f| %>
+    <div class="field">
+      <%= f.input :email, label_html: { style: "display: block;" } %>
+    </div>
+    <div class="field">
+    <%= f.input :password, label_html: { style: "display: block;" } %>
+    </div>
+    <div class="field">
+      <div class="ui checkbox">
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      </div>
+    </div>
+    <%= f.button :submit, "Log in", class: "ui button" %>
+<% end %>
