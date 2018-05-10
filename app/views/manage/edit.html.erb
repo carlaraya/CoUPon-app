@@ -23,22 +23,27 @@ Client: UP Diliman Department of Computer Science Student Organizations
 This software aims to provide a convenient avenue for student organizations to display their org and collect contact information from students interested in joining them.
 -->
 
-<div class=container3>
+<div class="ui form">
 <h2>Edit Organization Information</h2>
 <p>This page is for modification of previous entries displayed in Organizations page. Organzation account can also be deleted using the delete button below.</p>
 <br/>
 <%= simple_form_for current_org, method: :patch, url: manage_update_path do |f| %>
+	 <div class = "fields">
+	 <div class = "field">
      <%= f.input :name, wrapper_html: { class: 'laskdfj' }, label_html: { class: 'laskdfj', style: "display: block;" }  %>
-     <br/>
+     </div>
+     <div class = "field">
      <%= f.input :logo,  as: :file, wrapper_html: { class: 'laskdfj' }, label_html: { class: 'laskdfj', style: "display: block;"  } %>
-     <br/>
+     </div>
+     </div>
+
      <%= f.input :info, wrapper_html: { class: 'laskdfj' }, label_html: { class: 'laskdfj', style: "display: block;"  }   %>
      <br/>
      <%= f.input :contact, wrapper_html: { class: 'laskdfj' }, label_html: { class: 'laskdfj', style: "display: block;"  }  %>
      <br />
-     <%= f.button :submit, class: 'button' %>
+     <%= f.button :submit, class: 'ui button' %>
 <% end %>
 
 <br />
-<%= link_to 'Delete Org', manage_destroy_path, method: :delete, data: {confirm: "Are you sure?"} %>
+<%= link_to 'Delete Org', manage_destroy_path, method: :delete, data: {confirm: "Are you sure?"}, class: "ui button" %>
 </div>
