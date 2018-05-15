@@ -28,7 +28,7 @@ This software aims to provide a convenient avenue for student organizations to d
 <!DOCTYPE html>
 <html>
      <head>
-          <title>CoUPonApp</title>
+          <title>CoUPon - Check Out UP Orgs Now!</title>
           <%= csrf_meta_tags %>
 
           <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -37,10 +37,10 @@ This software aims to provide a convenient avenue for student organizations to d
 
      <body>
           <div class="ui red inverted menu borderless" id="navbar">
-               <div class="item">
+                  <%= link_to root_path, class: "item" do %>
                     <img src="/images/logo.png" class="logo"/>
                     <img src="/images/name.png" class="name"/>
-               </div>
+                  <% end %>
                     <%= link_to "Home", root_path, class: "item" %>
                     <%= link_to "About", about_path, class: "item" %>
                   <% if org_signed_in? %>
