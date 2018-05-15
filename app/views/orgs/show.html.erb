@@ -30,5 +30,5 @@ This software aims to provide a convenient avenue for student organizations to d
      <p><%= (@org.info.presence || 'no info').gsub(/\n/, '<br/>').html_safe %></p>
      <h4>Contact details</h4>
      <p><%= (@org.contact.presence || 'no info').gsub(/\n/, '<br/>').html_safe %></p>
-     <%= link_to "Return to Organizations", root_path, class: "navigation", class: "button" %>
+     <%= link_to "Return to Organizations", root_path, class: "navigation", class: "ui button" %>
 </div>

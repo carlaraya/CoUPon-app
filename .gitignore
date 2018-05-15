@@ -19,3 +19,5 @@
 .byebug_history
 
 config/environment_variables.yml
+
+/public/system

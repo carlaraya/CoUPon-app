@@ -25,7 +25,7 @@ This software aims to provide a convenient avenue for student organizations to d
 
 <h2>Logged in as <%= current_admin.email %></h2>
 <br />
-<div class=container3>
+<div class="ui form">
      <h3>Create org account</h3>
      <br/>
      <%= simple_form_for @org, method: :post, url: create_org_path do |f| %>
@@ -33,6 +33,7 @@ This software aims to provide a convenient avenue for student organizations to d
           <%= f.input :email, label_html: { style: "display: block;" } %>
           <%= f.input :password, label_html: { style: "display: block;" } %>
           <%= f.input :password_confirmation, label_html: { style: "display: block;" } %>
-          <%= f.button :submit, class: "button" %>
+          <br/>
+          <%= f.button :submit, class: "ui button" %>
      <% end %>
 </div>
