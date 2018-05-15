@@ -37,7 +37,7 @@ This software aims to provide a convenient avenue for student organizations to d
     </div>
   <% end %>
 
-  <div class="ui form">
+  <div class="ui equal width form">
        <div class="fields">
        <div class="field">
          <%= form.label :last_name %>
@@ -54,21 +54,21 @@ This software aims to provide a convenient avenue for student organizations to d
        </div>
 
        <div class="fields">
-       <div class="field">
-         <%= form.label :year_level %>
-         <%= form.number_field :year_level, min: 1, id: :student_year_level, value: 1%>
+         <div class="field">
+           <%= form.label :year_level %>
+           <%= form.number_field :year_level, min: 1, id: :student_year_level, value: 1%>
+         </div>
+
+         <div class="field">
+           <%= form.label :course %>
+           <%= form.text_field :course, id: :student_course %>
+         </div>
        </div>
 
-       <div class="field">
-         <%= form.label :course %>
-         <%= form.text_field :course, id: :student_course %>
+         <div class="field">
+         <%= form.label :birthday %>
        </div>
-       </div>
-
-       <%= form.label :birthday %>
-       <br>
        <div class="fields">
-         
          <%= form.date_select :birthday, id: :student_birthday, start_year: 1900 %>
        </div>
   
