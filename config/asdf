@@ -1,0 +1,4 @@
+heroku config:set GCS_PRIVATE_KEY_ID="$(python3 -c "import sys, json; print(json.load(open('config/keyfile.json', 'r'))['private_key_id'])")"
+heroku config:set GCS_PRIVATE_KEY="$(python3 -c "import sys, json; print(json.load(open('config/keyfile.json', 'r'))['private_key'])")"
+heroku config:set GCS_CLIENT_ID="$(python3 -c "import sys, json; print(json.load(open('config/keyfile.json', 'r'))['client_id'])")"
+heroku config:set GCS_CLIENT_X509_CERT_URL="$(python3 -c "import sys, json; print(json.load(open('config/keyfile.json', 'r'))['client_x509_cert_url'])")"
