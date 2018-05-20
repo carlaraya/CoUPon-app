@@ -37,10 +37,5 @@ This software aims to provide a convenient avenue for student organizations to d
     <div class="field">
     <%= f.input :password, label_html: { style: "display: block;" } %>
     </div>
-    <div class="field">
-      <div class="ui checkbox">
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-      </div>
-    </div>
     <%= f.button :submit, "Log in", class: "ui button" %>
 <% end %>
