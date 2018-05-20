@@ -17,4 +17,3 @@ google:
     client_x509_cert_url: <%= ENV["GCS_CLIENT_X509_CERT_URL"] %>
   project: "what-is-this@possible-sun-157211.iam.gserviceaccount.com"
   bucket: "coupon-upd"
-      "sldkjf"
