@@ -24,7 +24,9 @@ This software aims to provide a convenient avenue for student organizations to d
 -->
 
 <div class=container4>
-     <%= image_tag @org.logo.url(:thumb) , class: "image" %>
+     <% if @org.logo.attached? %>
+       <%= image_tag @org.logo_thumb , class: "image" %>
+     <% end %>
      <h1><%= @org.name %></h1>
      <h2>What is <%= @org.name %>?</h2>
      <p><%= (@org.info.presence || 'no info').gsub(/\n/, '<br/>').html_safe %></p>

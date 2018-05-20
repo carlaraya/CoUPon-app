@@ -29,7 +29,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -76,7 +76,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-gem 'paperclip', '~> 5.2.1'
+gem 'image_processing'
+gem 'google-cloud-storage', '~> 1.8', require: false
 gem 'simple_form'
 gem 'friendly_id', '~> 5.1.0'
 gem 'semantic-ui-sass'

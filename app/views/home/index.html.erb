@@ -37,7 +37,9 @@ This software aims to provide a convenient avenue for student organizations to d
       <% @orgs.each do |org| %>
         <%= link_to show_org_path(org.slug), class: "ui card" do %>
           <div class="image">
-            <%= image_tag org.logo.url(:medium) %>
+            <% if org.logo.attached? %>
+              <%= image_tag org.logo_thumb %>
+            <% end %>
           </div>
           <div class="content">
             <div class="header"><%= org.name %></div>
