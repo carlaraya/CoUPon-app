@@ -8,7 +8,7 @@ google:
     type: "service_account"
     project_id: "possible-sun-157211"
     private_key_id: <%= ENV["GCS_PRIVATE_KEY_ID"] %>
-    private_key: <%= ENV["GCS_PRIVATE_KEY"].gsub('\n', '\\n') %>
+    private_key: <%= ENV["GCS_PRIVATE_KEY"] %>
     client_email: "what-is-this@possible-sun-157211.iam.gserviceaccount.com"
     client_id: <%= ENV["GCS_CLIENT_ID"] %>
     auth_uri: "https://accounts.google.com/o/oauth2/auth"
