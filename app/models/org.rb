@@ -33,13 +33,15 @@ class Org < ApplicationRecord
   devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
   has_and_belongs_to_many :students
-  has_one_attached :logo
 
+  has_one_attached :logo
+  validates :logo, file_size: { less_than_or_equal_to: 1.megabyte },
+        file_content_type: { allow: ['image/png'] }
   def logo_medium
-    self.logo.variant(resize: "300x300>", combine_options: {gravity: "center", extent: "300x300"})
+    self.logo.variant(resize: "300x300^", combine_options: {gravity: "center", extent: "300x300"})
   end
   def logo_thumb
-    self.logo.variant(resize: "100x100>", combine_options: {gravity: "center", extent: "100x100"})
+    self.logo.variant(resize: "100x100^", combine_options: {gravity: "center", extent: "100x100"})
   end
   #has_attached_file :logo,
     #styles: { medium: "300x300>", thumb: "100x100>" },

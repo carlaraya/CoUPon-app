@@ -38,7 +38,7 @@ This software aims to provide a convenient avenue for student organizations to d
         <%= link_to show_org_path(org.slug), class: "ui card" do %>
           <div class="image">
             <% if org.logo.attached? %>
-              <%= image_tag org.logo_thumb %>
+              <%= image_tag org.logo_medium %>
             <% end %>
           </div>
           <div class="content">

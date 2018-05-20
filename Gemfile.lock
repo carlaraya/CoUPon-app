@@ -81,6 +81,9 @@ GEM
     faraday (0.15.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.23)
+    file_validators (2.3.0)
+      activemodel (>= 3.2)
+      mime-types (>= 1.0)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.4.1)
@@ -269,6 +272,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
+  file_validators
   friendly_id (~> 5.1.0)
   google-cloud-storage (~> 1.8)
   image_processing
