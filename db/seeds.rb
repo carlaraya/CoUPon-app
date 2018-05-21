@@ -43,6 +43,9 @@ seeds_list = [
 seeds_list.reverse.each do |seed_obj|
   seed_obj[:model].destroy_all
 end
+
+ActiveRecord::Base.connection.tables.each { |t| ActiveRecord::Base.connection.reset_pk_sequence!(t) }
+
 seeds_list.each do |seed_obj|
   print "Adding seeds to ", seed_obj[:model].name, "..."
   hmm = seed_obj[:model].create(seed_obj[:seeds])
@@ -55,4 +58,3 @@ seeds_list.each do |seed_obj|
 end
 puts "Finished adding seeds lmao"
 
-ActiveRecord::Base.connection.tables.each { |t| ActiveRecord::Base.connection.reset_pk_sequence!(t) }

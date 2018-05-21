@@ -78,7 +78,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'image_processing'
 gem 'google-cloud-storage', '~> 1.8', require: false
-gem 'file_validators'
+#gem 'file_validators'
 gem 'simple_form'
 gem 'friendly_id', '~> 5.1.0'
 gem 'semantic-ui-sass'

@@ -35,8 +35,21 @@ class Org < ApplicationRecord
   has_and_belongs_to_many :students
 
   has_one_attached :logo
-  validates :logo, file_size: { less_than_or_equal_to: 1.megabyte },
-        file_content_type: { allow: ['image/png'] }
+  #validates :logo, presence: false, file_size: { less_than_or_equal_to: 1.megabyte },
+  validate :logo_validation
+  def logo_validation
+    if logo.attached?
+      if logo.blob.byte_size > 1000000
+        logo.purge
+        errors[:base] << 'Too big'
+      elsif !logo.blob.content_type.starts_with?('image/png')
+        logo.purge
+        errors[:base] << 'Wrong format'
+      end
+    end
+  end
+
+        #file_content_type: { allow: ['image/png'] }
   def logo_medium
     self.logo.variant(resize: "300x300^", combine_options: {gravity: "center", extent: "300x300"})
   end
