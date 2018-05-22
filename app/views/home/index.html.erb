@@ -35,7 +35,7 @@ This software aims to provide a convenient avenue for student organizations to d
     <h4>Want to know more about the different student organizations? Click on organizations below to view their description and contact details.</h4>
     <div class="ui four cards">
       <% @orgs.each do |org| %>
-        <%= link_to show_org_path(org.slug), class: "ui card" do %>
+        <%= link_to show_org_path(org.slug), class: "ui org card" do %>
           <div class="image">
             <% if org.logo.attached? %>
               <%= image_tag org.logo_medium %>
